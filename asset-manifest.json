@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/kdapp-frontend/static/css/main.d458f255.css",
-    "main.js": "/kdapp-frontend/static/js/main.9aba55f6.js",
+    "main.js": "/kdapp-frontend/static/js/main.affaa858.js",
     "static/js/787.562ec11f.chunk.js": "/kdapp-frontend/static/js/787.562ec11f.chunk.js",
     "index.html": "/kdapp-frontend/index.html",
     "main.d458f255.css.map": "/kdapp-frontend/static/css/main.d458f255.css.map",
-    "main.9aba55f6.js.map": "/kdapp-frontend/static/js/main.9aba55f6.js.map",
+    "main.affaa858.js.map": "/kdapp-frontend/static/js/main.affaa858.js.map",
     "787.562ec11f.chunk.js.map": "/kdapp-frontend/static/js/787.562ec11f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d458f255.css",
-    "static/js/main.9aba55f6.js"
+    "static/js/main.affaa858.js"
   ]
 }
