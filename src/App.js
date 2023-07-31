@@ -71,6 +71,24 @@ function App() {
     return provider;
   }
 
+  const CreateAccount = async () => {
+    try{
+      const provider = getProvider()
+      const program = new anchor.Program(idl, programID, provider)
+      let tx = await program.rpc.initialize({
+        accounts: {
+          initialAccount: myAccount.publicKey,
+          user: provider.wallet.publicKey,
+          systemProgram: SystemProgram.programId,
+        },
+        signers: [myAccount],
+       })
+       console.log('Created a new myAccount with address: ', myAccount.publicKey.toString())
+    } catch (error){
+      console.log('Error in creating account: ', error)
+    }
+  }
+  
   const Retrieve = async () => {
     try{
       const provider = getProvider()
@@ -89,23 +107,7 @@ function App() {
     setInputValue(value)
   }
 
-  const CreateAccount = async () => {
-    try{
-      const provider = getProvider()
-      const program = new anchor.Program(idl, programID, provider)
-      let tx = await program.rpc.initialize({
-        accounts: {
-          initialAccount: myAccount.publicKey,
-          user: provider.wallet.publicKey,
-          systemProgram: SystemProgram.programId,
-        },
-        signers: [myAccount],
-       })
-       console.log('Created a new myAccount with address: ', myAccount.publicKey.toString())
-    } catch (error){
-      console.log('Error in creating account: ', error)
-    }
-  }
+  
 
   const UpdateValue = async () => {
     try{
